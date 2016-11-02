@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+h1 {
+	color: #22313F;
+	text-transform: uppercase;
+}
+h1 ~ nav {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+h1 ~ nav a {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+body {
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+}
+datepicker {
+	display: inline-block;
+}

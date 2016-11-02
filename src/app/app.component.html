@@ -1,0 +1,30 @@
+<h1>
+  Nasa Browser
+</h1>
+<nav>
+	<a [routerLink]="['/']">
+    Home
+  </a>
+  |
+	<a [routerLink]="['/asteroids']">
+    Nearby asteroids
+  </a>
+  |
+	<a [routerLink]="['/apod']">
+    Astronomy picture of the day
+  </a>
+</nav>
+
+<main>
+
+	<router-outlet></router-outlet>
+</main>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  © 2016
+</footer>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=UTF-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="common.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      function upd (el) {
+        var ref = $(el).attr("class");
+        $("#solar-system").removeClass().addClass(ref);
+        $("#data a").siblings('a.active').removeClass('active');
+        $(el).addClass('active');
+      }
+    </script>
+
+    <title>Nasa Browser</title>
+    <base href="/">
+  </head>
+  <body>
+
+    <app>
+      Loading...
+    </app>
+
+    <script src="/polyfills.bundle.js"></script>
+    <script src="/vendor.bundle.js"></script>
+    <script src="/main.bundle.js"></script>
+
+  </body>
+</html>
