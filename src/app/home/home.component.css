@@ -16,7 +16,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 body {
   line-height: 1; }
-
+.planets-control a {
+  cursor: pointer;
+}
 ol, ul {
   list-style: none; }
 
