@@ -7,8 +7,12 @@ import {NasaService} from '../nasa.service';
   templateUrl: 'apod.component.html'
 })
 export class ApodComponent {
-	date = '';
+	date: string = '';
+
+  constructor(private nasa: NasaService) {
+  }
+
 	go() {
-		NasaService.getApod(this.date);
+		this.nasa.getApod(this.date);
 	}
 }
