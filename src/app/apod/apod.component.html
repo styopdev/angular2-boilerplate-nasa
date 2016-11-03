@@ -3,4 +3,10 @@
 <datepicker [(ngModel)]="date" [expanded]="true"></datepicker>
 <br>
 {{chdate}}
-<button (click)="go()">Go</button>
+<button class="button" (click)="go()">Go</button>
+
+<div *ngIf="apod">
+	<h5>{{apod.title}}</h5>
+	<p>{{apod.explanation}}</p>
+	<img [src]="apod.url" alt="Astronomy image of the day">
+</div>

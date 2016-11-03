@@ -8,11 +8,15 @@ import {NasaService} from '../nasa.service';
 })
 export class ApodComponent {
 	date: string = '';
+  apod: any;
 
   constructor(private nasa: NasaService) {
   }
 
 	go() {
-		this.nasa.getApod(this.date);
+		this.nasa.getApod(this.date)
+			.subscribe(apod => {
+        this.apod = apod;
+      });
 	}
 }
