@@ -16,7 +16,7 @@
 		<td><a target="_blank" [href]="ast.nasa_jpl_url">{{ ast.name }}</a></td>
 		<td>{{ ast.close_approach_data[0].miss_distance.kilometers }}</td>
 		<td>{{ ast.absolute_magnitude_h }}</td>
-		<td>{{ ast.is_potentially_hazardous_asteroid }}</td>
+		<td><span [ngClass]="{'success': !ast.is_potentially_hazardous_asteroid, 'danger': ast.is_potentially_hazardous_asteroid }">{{ ast.is_potentially_hazardous_asteroid }}</span></td>
 		<td>{{ ast.estimated_diameter.meters.estimated_diameter_min }} - {{ ast.estimated_diameter.meters.estimated_diameter_max }}</td>
 	</tr>
 </table>

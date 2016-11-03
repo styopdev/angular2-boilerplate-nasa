@@ -10,3 +10,15 @@
 .nearby-asteroids tr td {
 	border: 1px solid black;
 }
+span.success {
+	background-color: #5cb85c;
+	padding-right: 5px;
+	padding-left: 5px;
+	color: white;
+}
+span.danger {
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	background-color: #d9534f;
+}
