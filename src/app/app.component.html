@@ -1,20 +1,23 @@
 <h1>
-  Nasa Browser
+    {{ "nasa_browser" | translate }}
 </h1>
 <nav>
-	<a [routerLink]="['/']">
-    Home
+  <a [routerLink]="['/']">    
+    {{ "home" | translate }}
   </a>
   |
-	<a [routerLink]="['/asteroids']">
-    Nearby asteroids
+  <a [routerLink]="['/asteroids']">
+    {{ "nearby_asteroids" | translate }}
   </a>
   |
-	<a [routerLink]="['/apod']">
-    Astronomy picture of the day
+  <a [routerLink]="['/apod']">
+    {{ "apod" | translate }}
   </a>
 </nav>
-
+<div class="lang-bar">
+  <a (click)="changeLang('en')">EN</a>
+  <a (click)="changeLang('hy')">ՀՅ</a>
+</div>
 <main>
 
 	<router-outlet></router-outlet>

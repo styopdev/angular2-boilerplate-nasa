@@ -62,3 +62,6 @@ datepicker {
 .ui-kit-calendar-input.opened span {
 	color: black !important;
 }
+.lang-bar a {
+	cursor: pointer;
+}

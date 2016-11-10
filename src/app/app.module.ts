@@ -10,12 +10,14 @@ import {ApodComponent} from './apod/apod.component';
 import {AsteroidsComponent} from './asteroids/asteroids.component';
 import {HomeComponent} from './home/home.component';
 import { DatePicker } from 'ng2-datepicker/ng2-datepicker';
-import {LocationStrategy, HashLocationStrategy} from '@angular/common';
+import {TranslateModule} from "ng2-translate";
+import {LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent, ApodComponent, AsteroidsComponent, HomeComponent, DatePicker],
-  imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig)],
-  providers   : [NasaService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  imports     : [BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(rootRouterConfig), TranslateModule.forRoot()],
+  exports 		: [TranslateModule],
+  providers   : [NasaService, {provide: LocationStrategy, useClass: PathLocationStrategy}],
   bootstrap   : [AppComponent]
 })
 export class AppModule {
