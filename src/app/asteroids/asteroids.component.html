@@ -1,14 +1,16 @@
 <h3>Asteroids Component</h3>
 <p>Search for Asteroids based on their closest approach date to Earth</p>
-  <datepicker [(ngModel)]="startDate" [expanded]="true"></datepicker>
-  <datepicker [(ngModel)]="endDate" [expanded]="true"></datepicker>
+	<datepicker [(ngModel)]="startDate" [expanded]="true"></datepicker>
+	<datepicker  [(ngModel)]="endDate" [expanded]="true"></datepicker>
+	<div *ngIf="invalidRange" class="alert alert-error">Range should not exceed 1 week</div>
+	<br>
+	<button class="button" (click)="go()">Go</button>
 <br>
-<button class="button" (click)="go()">Go</button>
 <table class="nearby-asteroids" *ngIf="asteroids">
 	<tr>
 		<th>Title</th>
 		<th>Distance</th>
-		<th>Absolute Magnitude</th>
+		<th><a href="http://neo.jpl.nasa.gov/glossary/h.html">Absolute Magnitude</a></th>
 		<th>Is potentially hazardous</th>
 		<th>Diameter</th>
 	</tr>

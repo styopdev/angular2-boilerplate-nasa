@@ -22,3 +22,11 @@ span.danger {
 	padding-right: 5px;
 	background-color: #d9534f;
 }
+.alert.alert-error {
+	display: block;
+	width: 248px;
+	margin: 0 auto;
+	background-color: #d9534f;
+	color: white;
+	margin-bottom: 10px;
+}
