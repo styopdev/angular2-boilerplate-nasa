@@ -6,19 +6,4 @@
 	<br>
 	<button class="button" (click)="go()">Go</button>
 <br>
-<table class="nearby-asteroids" *ngIf="asteroids">
-	<tr>
-		<th>Title</th>
-		<th>Distance</th>
-		<th><a href="http://neo.jpl.nasa.gov/glossary/h.html">Absolute Magnitude</a></th>
-		<th>Is potentially hazardous</th>
-		<th>Diameter</th>
-	</tr>
-	<tr *ngFor="let ast of asteroids">
-		<td><a target="_blank" [href]="ast.nasa_jpl_url">{{ ast.name }}</a></td>
-		<td>{{ ast.close_approach_data[0].miss_distance.kilometers }}</td>
-		<td>{{ ast.absolute_magnitude_h }}</td>
-		<td><span [ngClass]="{'success': !ast.is_potentially_hazardous_asteroid, 'danger': ast.is_potentially_hazardous_asteroid }">{{ ast.is_potentially_hazardous_asteroid }}</span></td>
-		<td>{{ ast.estimated_diameter.meters.estimated_diameter_min }} - {{ ast.estimated_diameter.meters.estimated_diameter_max }}</td>
-	</tr>
-</table>
+<asteroids-table></asteroids-table>

@@ -30,3 +30,10 @@ span.danger {
 	color: white;
 	margin-bottom: 10px;
 }
+.table-container {
+	max-width: 960px;
+	margin: 0 auto
+}
+.table-container th {
+	cursor: pointer;
+}

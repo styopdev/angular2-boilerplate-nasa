@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NasaService} from '../nasa.service';
+import {NasaService} from '../shared/nasa.service';
 
 @Component({
   selector: 'apod',
