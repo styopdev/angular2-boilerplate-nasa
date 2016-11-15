@@ -2,22 +2,38 @@
     {{ "nasa_browser" | translate }}
 </h1>
 <nav>
-  <a [routerLink]="['/']">    
-    {{ "home" | translate }}
-  </a>
-  |
-  <a [routerLink]="['/asteroids']">
-    {{ "nearby_asteroids" | translate }}
-  </a>
-  |
-  <a [routerLink]="['/apod']">
-    {{ "apod" | translate }}
-  </a>
+  <ul id="menu">
+    <li>
+      <a [routerLink]="['/']">    
+        {{ "home" | translate }}
+      </a>
+      |
+    </li>
+    <li>
+      <a [routerLink]="['/asteroids']">
+        {{ "nearby_asteroids" | translate }}
+      </a>
+      |
+    </li>
+    <li>
+      <a [routerLink]="['/apod']">
+        {{ "apod" | translate }}
+      </a>
+    </li>
+  </ul>
+  <ul class="lang-bar">
+    <li>
+      <a (click)="changeLang('en')">EN</a> |
+    </li>
+    <li>
+      <a (click)="changeLang('ru')">РУ</a> |
+    </li>    
+    <li>
+      <a (click)="changeLang('hy')">ՀՅ</a>
+    </li>
+  </ul>
 </nav>
-<div class="lang-bar">
-  <a (click)="changeLang('en')">EN</a>
-  <a (click)="changeLang('hy')">ՀՅ</a>
-</div>
+
 <main>
 
 	<router-outlet></router-outlet>
