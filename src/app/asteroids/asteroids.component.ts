@@ -1,4 +1,4 @@
-import {Component, ViewChild, ViewEncapsulation, Input, Output, EventEmitter} from '@angular/core';
+import {Component, ViewChild, ViewEncapsulation} from '@angular/core';
 import {NasaService} from '../shared/nasa.service';
 import {AsteroidsTableComponent} from './asteroids.table.component';
 
