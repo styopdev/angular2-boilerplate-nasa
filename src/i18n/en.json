@@ -2,5 +2,6 @@
 	"nasa_browser" : "nasa browser",
 	"home" : "home",
 	"nearby_asteroids" : "nearby asteroids",
-	"apod" : "astronomy picture of the day"
+	"apod" : "astronomy picture of the day",
+	"submit_planet": "Submit new planet"
 }

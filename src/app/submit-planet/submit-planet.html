@@ -1,0 +1,51 @@
+<div class="submit-form">
+	<p>If you found new planet you can add it to our directory (Reactive forms demo)</p>
+
+	<div class="alert alert-success" *ngIf="submitted && form.valid">
+		Good job, form has been successfully submitted!
+	</div>
+
+	<form [formGroup]="form" (ngSubmit)="submitPlanet()">
+		<div formGroupName="planetdata" class="form-group">
+			<input class="form-control" type="text" formControlName="name" placeholder="Planet Name">
+ 			<div class="msg-invalid" *ngIf="!form.controls.planetdata.controls.name.valid && submitted">
+				<span *ngIf="form.controls.planetdata.controls.name.errors.required">Required</span>
+				<span *ngIf="form.controls.planetdata.controls.name.errors.minlength">Min length is 16 symbols</span>
+			</div>
+ 			<select class="form-control" formControlName="location">
+        <option value='' disabled selected>Galaxy name</option>
+        <option *ngFor="let glx of galaxies" [value]="glx.name">  
+        	{{glx.name}}
+        </option>
+    	</select>
+ 			<div class="msg-invalid" *ngIf="!form.controls.planetdata.controls.location.valid && submitted">
+				<span *ngIf="form.controls.planetdata.controls.location.errors.required">Required</span>
+			</div>
+
+			<input class="form-control" type="number" formControlName="diameter" placeholder="Diameter (km)">
+ 			<div class="msg-invalid" *ngIf="!form.controls.planetdata.controls.diameter.valid && submitted">
+				<span *ngIf="form.controls.planetdata.controls.diameter.errors.required">Required</span>
+			</div>
+			<input class="form-control" type="number" formControlName="distance" placeholder="Distance (mln km)">
+ 			<div class="msg-invalid" *ngIf="!form.controls.planetdata.controls.distance.valid && submitted">
+				<span *ngIf="form.controls.planetdata.controls.distance.errors.required">Required</span>
+			</div>
+		</div>
+		<div formGroupName="userdata" class="form-group">
+			<input class="form-control" formControlName="username" placeholder="Your name">
+ 			<div class="msg-invalid" *ngIf="!form.controls.userdata.controls.username.valid && submitted">
+				<span *ngIf="form.controls.userdata.controls.username.errors.required">Required</span>
+			</div>
+			<input class="form-control" formControlName="email" placeholder="Your email">
+ 			<div class="msg-invalid" *ngIf="!form.controls.userdata.controls.email.valid && submitted">
+				<span *ngIf="form.controls.userdata.controls.email.errors.required">Required</span>
+				<span *ngIf="!form.controls.userdata.controls.email.errors.required && !form.controls.userdata.controls.email.errors.invalidEmail">Email is not valid</span>
+			</div>
+		</div>
+		<button class="button" type="submit">Submit</button>
+	</form>
+	<br>
+	<div *ngIf="submitted && form.valid" class="alert alert-info" role="alert">
+		{{ form.value | json }}
+	</div>
+</div>

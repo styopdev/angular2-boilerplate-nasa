@@ -1,0 +1,11 @@
+.submit-form {
+	margin: 0 auto;
+	max-width: 640px;
+}
+.msg-invalid {
+	color: red;
+	font-size: 14px;
+}
+.submit-form .form-control {
+	margin-bottom: 5px;
+}
